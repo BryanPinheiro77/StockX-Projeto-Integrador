@@ -40,7 +40,7 @@ body {
 }
 
 .sidebar .logo {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 40px;
   color: #60a5fa;
@@ -289,6 +289,16 @@ body {
   z-index: 9999;
   opacity: 0.95;
   animation: fadeInOut 2.5s ease-in-out;
+}
+
+
+
+.mensagem-flutuante.alerta {
+  background: #f44336 !important; /* vermelho */
+  margin: 40px;
+  text-align: center;
+  top: 20px;
+  right: 20px;
 }
 
 @keyframes fadeInOut {

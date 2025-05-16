@@ -26,9 +26,13 @@
         </div>
       </div>
 
-      <div
+      <div 
+  class="mensagem-flutuante" 
+  [ngClass]="{
+    'alerta': tipoMensagem === 'alerta',
+    'normal': tipoMensagem === 'normal'
+  }"
   *ngIf="mostrarMensagem"
-  class="mensagem-flutuante"
 >
   {{ mensagemFlutuante }}
 </div>

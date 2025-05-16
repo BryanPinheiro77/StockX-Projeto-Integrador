@@ -21,9 +21,25 @@ export class HomeComponent implements OnInit {
   constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
-    this.productService.seedData();
-    this.atualizarDados();
+  this.productService.seedData();
+  this.atualizarDados();
+
+  const estado = history.state?.mensagemEstoqueBaixo;
+if (estado) {
+  this.exibirMensagem(estado, 'alerta');
+
+  // Limpa o estado para não repetir na próxima recarga
+  history.replaceState({}, '', location.pathname);
+} else {
+  const produtosComEstoqueBaixo = this.produtos.filter(p => p.quantity <= 2);
+  if (produtosComEstoqueBaixo.length > 0) {
+    const nomes = produtosComEstoqueBaixo.map(p => `"${p.name}"`).join(', ');
+    const texto = `⚠ Produtos com estoque muito baixo: ${nomes}`;
+    this.exibirMensagem(texto, 'alerta', 2500);
   }
+}
+
+}
 
   atualizarDados() {
     this.resumo = this.productService.getResumo();
@@ -57,9 +73,11 @@ export class HomeComponent implements OnInit {
 
   mensagemFlutuante: string = '';
 mostrarMensagem = false;
+tipoMensagem: 'normal' | 'alerta' = 'normal';
 
-exibirMensagem(texto: string, duracaoMs: number = 2500) {
+exibirMensagem(texto: string, tipo: 'normal' | 'alerta' = 'normal', duracaoMs: number = 2500) {
   this.mensagemFlutuante = texto;
+  this.tipoMensagem = tipo;
   this.mostrarMensagem = true;
 
   setTimeout(() => {

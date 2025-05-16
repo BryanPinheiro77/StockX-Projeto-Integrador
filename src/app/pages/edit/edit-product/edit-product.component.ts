@@ -41,10 +41,19 @@ export class EditProductComponent implements OnInit {
 
   atualizarProduto(): void {
   this.productService.updateProduct(this.produto);
+
+  let mensagemEstoqueBaixo = '';
+  if (this.produto.quantity <= 2) {
+    mensagemEstoqueBaixo = `⚠ Estoque baixo: "${this.produto.name}" tem apenas ${this.produto.quantity} unidade(s)!`;
+  }
+
   this.exibirMensagem('Produto atualizado com sucesso!');
+
   setTimeout(() => {
-    this.router.navigate(['/']);
-  }, 1100); // mesmo tempo da duração da mensagem
+    this.router.navigate(['/'], {
+      state: { mensagemEstoqueBaixo }  // 👈 envia para o componente da home
+    });
+  }, 1100);
 }
 
 

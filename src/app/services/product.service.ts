@@ -65,7 +65,7 @@ updateProduct(updated: Product) {
     const iniciais: Product[] = [
       { id: 1, name: 'Mouse Gamer', quantity: 10, price: 120 },
       { id: 2, name: 'Teclado Mecânico', quantity: 5, price: 280 },
-      { id: 3, name: 'Monitor 24"', quantity: 2, price: 900 },
+      { id: 3, name: 'Monitor 24', quantity: 2, price: 900 },
     ];
     this.saveAll(iniciais);
     console.log('✅ Produtos iniciais adicionados!');
