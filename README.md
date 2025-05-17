@@ -18,7 +18,7 @@ Faz parte da disciplina Projeto Integrador e simula o gerenciamento de produtos 
 - 🔍 Filtro em tempo real por nome do produto  
 - 📝 Cadastro e edição de produtos  
 - ❌ Exclusão com confirmação  
-- ⚠️ Alertas automáticos de estoque baixo (≤ 2 unidade)  
+- ⚠️ Alertas automáticos de estoque baixo (≤ 2 unidades)  
 - 🔔 Mensagens flutuantes de sucesso e alerta  
 - 🧪 Seed automático de produtos fictícios para testes  
 
