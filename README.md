@@ -1,59 +1,54 @@
-# CrudPi
+# 📦 StockX
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+**StockX** é um sistema de controle de estoque com foco em praticidade e alertas inteligentes.  
+Foi desenvolvido como **projeto acadêmico para Projeto Integrador** do curso de **Análise e Desenvolvimento de Sistemas**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🎓 Sobre o Projeto
+
+Este projeto foi desenvolvido com o objetivo de aplicar conhecimentos práticos de **desenvolvimento front-end com Angular**, organização de componentes e **gestão de dados em memória**.  
+Faz parte da disciplina Projeto Integrador e simula o gerenciamento de produtos em um pequeno comércio, loja ou armazém.
+
+---
+
+## 🚀 Funcionalidades
+
+- ✅ Resumo com total de itens e valor em estoque  
+- 🔍 Filtro em tempo real por nome do produto  
+- 📝 Cadastro e edição de produtos  
+- ❌ Exclusão com confirmação  
+- ⚠️ Alertas automáticos de estoque baixo (≤ 1 unidade)  
+- 🔔 Mensagens flutuantes de sucesso e alerta  
+- 🧪 Seed automático de produtos fictícios para testes  
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- Angular 17+  
+- TypeScript  
+- Standalone Components  
+- FormsModule  
+- CSS
+
+---
+
+## ▶️ Como Executar o Projeto
+
+### Clone o repositório:
 
 ```bash
+git clone https://github.com/seu-usuario/stockx.git
+cd stockx
+Instale as dependências:
+```bash
+Copiar
+Editar
+npm install
+Inicie a aplicação:
+```bash
+Copiar
+Editar
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Acesse em: http://localhost:4200
