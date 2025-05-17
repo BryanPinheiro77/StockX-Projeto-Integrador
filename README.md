@@ -42,12 +42,10 @@ Faz parte da disciplina Projeto Integrador e simula o gerenciamento de produtos 
 git clone https://github.com/seu-usuario/stockx.git
 cd stockx
 Instale as dependências:
-```bash
 Copiar
 Editar
 npm install
 Inicie a aplicação:
-```bash
 Copiar
 Editar
 ng serve
